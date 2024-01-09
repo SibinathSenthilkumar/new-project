@@ -14,7 +14,8 @@ public class EmployeeController {
     @Autowired
     EmployeeServicesImp employeeServicesImp;
     @PostMapping (value = "/details")
-                    private EmployeeResponsesBody getDetails(@RequestBody  EmployeeRequestBody employeeRequestBody){
+                    private EmployeeResponsesBody getEmployeeDetails(@RequestBody  EmployeeRequestBody employeeRequestBody){
+                    private EmployeeResponsesBody getEmployeeDetails(@RequestBody  EmployeeRequestBody employeeRequestBody){
         EmployeeResponsesBody employeeResponsesBody =employeeServicesImp.getEmployeeDeatails(employeeRequestBody);
         return employeeResponsesBody;
     }
